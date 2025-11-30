@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def uppercase(str):
-    decimal = ord(str)-32
-    new_str = chr(decimal)
-    return new_str
+def uppercase(char):
+    if 'a' <= char <= 'z':  
+        return chr(ord(char) - 32)
+    return char
