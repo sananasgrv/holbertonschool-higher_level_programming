@@ -6,6 +6,3 @@ def new_in_list(my_list, idx, element):
         new_list = my_list.copy()
         new_list[idx] = element
         return new_list
-
-my_list=[1,2,3]
-print(new_in_list(my_list,1,7),)
