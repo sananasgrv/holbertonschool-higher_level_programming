@@ -1,0 +1,1 @@
+That is readme file of more data structure directory
