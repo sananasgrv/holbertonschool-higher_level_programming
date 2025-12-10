@@ -52,11 +52,4 @@ class Rectangle:
         return result
 
     def __repr__(self):
-        result = ""
-        if self.__width == 0 or self.__height == 0:
-            return result
-        for i in range(self.__height):
-            result += "#" * self.__width
-            if i < self.__height - 1:
-                result += "\n"
-        return result
+        print(f"Rectangle({self.__width}, {self.__height})")
