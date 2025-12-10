@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Comment"""
-from wx.lib.masked import value
-
 
 class Rectangle:
     """Class doc"""
