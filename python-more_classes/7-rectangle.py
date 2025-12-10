@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Comment"""
+from wx.lib.masked import value
 
 
 class Rectangle:
@@ -36,6 +37,14 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    @property
+    def print_symbol(self):
+        return self.print_symbol
+
+    @print_symbol.setter
+    def print_symbol(self, value):
+        self.print_symbol = value
 
     def area(self):
         return self.__height * self.__width
