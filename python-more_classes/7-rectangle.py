@@ -6,10 +6,10 @@ class Rectangle:
 
     number_of_instances = 0
 
-    def __init__(self, width=0, height=0, print_symbol="#"):
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        self.print_symbol = print_symbol
+        Rectangle.print_symbol = "#"
         Rectangle.number_of_instances += 1
 
     @property
@@ -36,14 +36,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    @property
-    def print_symbol(self):
-        return self.print_symbol
-
-    @print_symbol.setter
-    def print_symbol(self, value):
-        self.print_symbol = value
-
     def area(self):
         return self.__height * self.__width
 
@@ -57,7 +49,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return result
         for i in range(self.__height):
-            result += f"{self.print_symbol}" * self.__width
+            result += f"{Rectangle.print_symbol}" * self.__width
             if i < self.__height - 1:
                 result += "\n"
         return result
