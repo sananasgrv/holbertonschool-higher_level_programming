@@ -4,12 +4,12 @@
 class Rectangle:
     """Class doc"""
 
-    print_symbol = "#"
     number_of_instances = 0
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0, print_symbol = "#"):
         self.width = width
         self.height = height
+        self.print_symbol = print_symbol
         Rectangle.number_of_instances += 1
 
     @property
@@ -49,7 +49,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return result
         for i in range(self.__height):
-            result += f"{Rectangle.print_symbol}" * self.__width
+            result += f"{self.print_symbol}" * self.__width
             if i < self.__height - 1:
                 result += "\n"
         return result
