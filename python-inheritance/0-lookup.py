@@ -2,4 +2,4 @@
 """Comment"""
 def lookup(obj):
     """comment"""
-    print(list(obj))
+    print(dir(obj))
