@@ -2,7 +2,7 @@
 """Comment"""
 
 
-class Mylist(list):
+class MyList(list):
     """Mylist class"""
 
 
