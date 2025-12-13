@@ -1,4 +1,4 @@
-#!/usr/bin/ptyhon3
+#!/usr/bin/python3
 """Documentation"""
 
 def read_file(filename=""):
