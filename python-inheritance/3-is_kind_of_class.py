@@ -2,7 +2,6 @@
 """Documentation"""
 
 
-
 def is_kind_of_class(obj, class_a):
     """Documentation"""
 
