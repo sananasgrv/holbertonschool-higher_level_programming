@@ -4,6 +4,10 @@
 
 def pascal_triangle(n):
     """Doc"""
-    for j in n:
-        for i in range(n):
-            print(f"[{j}]")
+
+    l = []
+    if n <= 0:
+        return l
+    l = [1]
+    for i in range(n):
+        l.append()
