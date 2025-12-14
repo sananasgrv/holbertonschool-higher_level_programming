@@ -12,5 +12,5 @@ class Student():
 
     def to_json(self,  attrs=None):
         if type(attrs) is list and all(type(a) is str for a in attrs):
-            return attrs.__dict__
+            return attrs
         return self.__dict__
