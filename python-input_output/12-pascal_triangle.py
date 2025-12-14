@@ -5,13 +5,20 @@
 def pascal_triangle(n):
     """Doc"""
 
-    l = []
-    if n <= 0:
-        return l
-    l = [1]
-    for i in range(1, n):
-        l.append(l[i] + l[i-1])
-        if i == n-1:
-            l.append(1)
 
-    return l
+
+    def summing(a,b,l: list ):
+        l.append(a+b)
+    prew = []
+    now = []
+    if n == 1:
+        l = []
+        return l
+    for i in range(n):
+        now.append(1)
+        for j in range(i):
+                summing(prew[j-1], prew[j], now)
+        now.append(1)
+        print(now)
+        prew = now.copy()
+        now = []
