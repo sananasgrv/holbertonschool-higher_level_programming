@@ -6,5 +6,4 @@ from wx.lib.dialogs import returnedString
 def class_to_json(obj):
     """Doc of the function"""
 
-    print(obj.__dict__)
-    return 0
+    return obj.__dict__
