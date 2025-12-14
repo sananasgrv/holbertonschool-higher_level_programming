@@ -3,4 +3,5 @@
 
 
 def pascal_triangle(n):
+    """Doc"""
     pass
