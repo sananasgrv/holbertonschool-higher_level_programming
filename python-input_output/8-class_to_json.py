@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Doc of the module"""
-import json
+from wx.lib.dialogs import returnedString
 
 
 def class_to_json(obj):
     """Doc of the function"""
 
-    return json.dumps(obj.__dict__)
+    print(obj.__dict__)
+    return 0
