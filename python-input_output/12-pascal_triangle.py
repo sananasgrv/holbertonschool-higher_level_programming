@@ -9,5 +9,9 @@ def pascal_triangle(n):
     if n <= 0:
         return l
     l = [1]
-    for i in range(n):
-        l.append()
+    for i in range(1, n):
+        l.append(l[i] + l[i-1])
+        if i == n-1:
+            l.append(1)
+
+    return l
