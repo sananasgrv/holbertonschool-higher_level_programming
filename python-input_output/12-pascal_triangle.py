@@ -4,4 +4,6 @@
 
 def pascal_triangle(n):
     """Doc"""
-    pass
+    for j in n:
+        for i in range(n):
+            print(f"[{j}]")
