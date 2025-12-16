@@ -5,7 +5,7 @@ def serialize_and_save_to_file(data, filename):
     try:
         with open(filename, "wb") as file:
             return pickle.dump(data, file)
-    except Exception as e:
+    except (pickle.PicklingError, AttributeError, TypeError) as e:
         raise TypeError("Object is not serializable") from e
 
 
