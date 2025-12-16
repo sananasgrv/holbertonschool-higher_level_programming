@@ -13,8 +13,11 @@ class CustomObject:
               f"Age: {self.age}",
               f"is_student: {self.is_student}")
     def serialize(self, filename):
-        with open(filename, "wb") as file:
-            return pickle.dumps(self.__dict__, file)
+        try:
+            with open(filename, "wb") as file:
+                return pickle.dumps(self.__dict__, file)
+        except (TypeError):
+            raise TypeError("Object could not be serialized")
     @classmethod
     def deserialize(cls, filename):
         try:
