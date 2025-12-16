@@ -20,5 +20,5 @@ class CustomObject:
         try:
             with open(filename, "rb") as file:
                 return pickle.load(file)
-        except (pickle.UnpicklingError, EOFError, AttributeError):
+        except (pickle.UnpicklingError, EOFError, AttributeError, TypeError):
             raise TypeError("Object could not be deserialized")
