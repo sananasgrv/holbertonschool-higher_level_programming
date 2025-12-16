@@ -16,7 +16,7 @@ class CustomObject:
         try:
             with open(filename, "wb") as file:
                 return pickle.dumps(self.__dict__, file)
-        except (TypeError):
+        except (pickle.PicklingError,AttributeError , TypeError):
             raise TypeError("Object could not be serialized")
     @classmethod
     def deserialize(cls, filename):
