@@ -11,7 +11,7 @@ class CustomObject:
     def display(self):
         print(f"Name: {self.name}",
               f"Age: {self.age}",
-              f"is_studen: {self.is_student}")
+              f"is_student: {self.is_student}")
     def  serialize(self, filename):
         with open(filename, "wb") as file:
             pickle.dump(self)
