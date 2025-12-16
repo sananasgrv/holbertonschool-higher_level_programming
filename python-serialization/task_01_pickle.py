@@ -25,7 +25,7 @@ class CustomObject:
             with open(filename, "rb") as file:
                 data = pickle.load(file)
                 return cls(**data)
-        except EOFError:
+        except EOFError as e:
             if os.path.getsize(filename) == 0:
                 raise
             raise TypeError("Object could not be deserialized") from e
