@@ -17,15 +17,13 @@ class CustomObject:
         try:
             with open(filename, "wb") as file:
                 return pickle.dump(self.__dict__, file)
-        except (pickle.PicklingError,AttributeError, TypeError) as e:
-            raise TypeError("Object could not be serialized") from e
+        except Exception as e:
+            print(f"Object could not be serialized{e}")
     @classmethod
     def deserialize(cls, filename):
-        if os.path.getsize(filename) == 0:
-            raise EOFError("Empty file")
         try:
             with open(filename, "rb") as file:
-                data = pickle.load(file)
-                return cls(**data)
-        except (pickle.UnpicklingError, AttributeError, TypeError) as e:
-            raise TypeError("Object could not be deserialized") from e
+                return pickle.load(file)
+        except Exception as e:
+            print(f"Object could not be serialized{e}")
+            return None
