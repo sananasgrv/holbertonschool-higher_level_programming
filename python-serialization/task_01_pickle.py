@@ -14,8 +14,8 @@ class CustomObject:
               f"is_student: {self.is_student}")
     def  serialize(self, filename):
         with open(filename, "wb") as file:
-            pickle.dumps(self.__dict__)
+            return pickle.dumps(self.__dict__)
     @classmethod
     def deserialize(cls, filename):
         with open(filename, "rb") as file:
-            pickle.loads(file)
+            return pickle.load(file)
