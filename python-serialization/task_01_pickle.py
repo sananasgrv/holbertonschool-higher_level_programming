@@ -21,14 +21,11 @@ class CustomObject:
             raise TypeError("Object could not be serialized") from e
     @classmethod
     def deserialize(cls, filename):
+        if os.path.getsize(filename) == 0:
+            raise EOFError("Empty file")
         try:
             with open(filename, "rb") as file:
                 data = pickle.load(file)
                 return cls(**data)
-        except EOFError as e:
-            if os.path.getsize(filename) == 0:
-                raise
-            raise TypeError("Object could not be deserialized") from e
-
         except (pickle.UnpicklingError, AttributeError, TypeError) as e:
             raise TypeError("Object could not be deserialized") from e
