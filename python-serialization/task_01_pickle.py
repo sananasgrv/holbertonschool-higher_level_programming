@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Doc"""
+import os
 import pickle
 
 
@@ -25,6 +26,9 @@ class CustomObject:
                 data = pickle.load(file)
                 return cls(**data)
         except EOFError:
-            raise
+            if os.path.getsize(filename) == 0:
+                raise
+            raise TypeError("Object could not be deserialized") from e
+
         except (pickle.UnpicklingError, AttributeError, TypeError) as e:
             raise TypeError("Object could not be deserialized") from e
