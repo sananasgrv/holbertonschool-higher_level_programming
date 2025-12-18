@@ -1,2 +1,2 @@
 --Droping the database
-DROP IF IS EXISTS hbtn_0c_0;
+DROP DAATABASE IF IS EXISTS hbtn_0c_0;
