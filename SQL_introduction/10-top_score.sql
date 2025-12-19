@@ -1,4 +1,4 @@
--- listing records
+-- Ordering table by score
 SELECT *
 FROM second_table
-OREDER BY score DESC
+ORDER BY score DESC
