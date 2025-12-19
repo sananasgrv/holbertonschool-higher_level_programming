@@ -1,5 +1,5 @@
 -- Whos score more and equal than 10
 SELECT score, name
 FROM second_table
-ORDER BY score 
-WHERE score >= 10;
+WHERE score >= 10
+ORDER BY score;
