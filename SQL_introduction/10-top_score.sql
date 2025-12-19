@@ -1,4 +1,4 @@
 -- Ordering table by score
-SELECT *
+SELECT score, name
 FROM second_table
 ORDER BY score DESC;
