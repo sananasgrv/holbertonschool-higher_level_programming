@@ -1,4 +1,4 @@
 -- record of 89
-SELECT *
+SELECT COUNT(id)
 FROM first_table
 WHERE id = 89
