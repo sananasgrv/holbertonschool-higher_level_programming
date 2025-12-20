@@ -1,4 +1,4 @@
 -- Number of records
 SELECT score, COUNT(score)
 FROM second_table
-ORDER BY score DESC
+ORDER BY COUNT(score) DESC
