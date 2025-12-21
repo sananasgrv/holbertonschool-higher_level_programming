@@ -1,5 +1,5 @@
 -- Comedy genre
-SELECT DISTINCT s.title AS name 
+SELECT DISTINCT s.title AS title 
 FROM tv_show_genres AS sg
 INNER JOIN tv_shows AS s
 ON s.id = sg.show_id
