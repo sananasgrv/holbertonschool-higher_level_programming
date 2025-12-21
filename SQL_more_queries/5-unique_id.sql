@@ -1,5 +1,5 @@
 -- Creating unique_id table
 CREATE TABLE IF NOT EXISTS unique_id(
-	id INT IF NOT EXISTS DEFAULT 1 UNIQUE,
+	id INT IF NOT NULL DEFAULT 1 UNIQUE,
 	name VARCHAR(256)
 );
