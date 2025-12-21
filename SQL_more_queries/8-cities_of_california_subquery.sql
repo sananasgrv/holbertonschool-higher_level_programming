@@ -1,8 +1,8 @@
 -- Listing California
 SELECT id, name
 FROM cities
-WHERE cities.id=(
+WHERE cities.state_id=(
 	SELECT id
-	FROM state
+	FROM states
 	WHERE name='California')
-ORDER BY cities.id
+ORDER BY id
